@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import anime from 'animejs';
 
-const GRID_WIDTH = 35;
+const GRID_WIDTH = 30;
 const GRID_HEIGHT = 25;
 
 const DotGrid = () => {
@@ -56,7 +56,7 @@ const DotGrid = () => {
           key={`${i}-${j}`}
         >
           <div
-            className='dot-point size-[.4rem] rounded-full bg-gradient-to-br from-[#7028e4] to-[#e5b2ca] opacity-50'
+            className='dot-point size-[.5rem] rounded-full bg-gradient-to-br from-[#09203f] to-[#537895] opacity-50'
             data-index={index}
           />
         </div>
