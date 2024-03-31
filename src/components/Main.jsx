@@ -33,7 +33,7 @@ const Main = () => {
         transition={{ duration: 1.5, delay: 1, ease: 'easeIn' }} // Animation duration and easing
         style={{
           position: 'absolute',
-          width: '800px',
+          width: '650px',
           height: '120px',
           borderRadius: '1000px',
           background: 'rgba(255, 255, 255, .05)',

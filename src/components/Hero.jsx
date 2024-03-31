@@ -60,14 +60,9 @@ const Hero = () => {
             <FaArrowRight className='text-zinc-950 group-hover:-rotate-45 transition-all' />
           </motion.a>
         </div>
-        <motion.div
-          initial={{ x: '100%', opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className='z-20 ml-[-20rem]'
-        >
+        <div className='z-20 ml-[-20rem]'>
           <AnimatedDots />
-        </motion.div>
+        </div>
       </section>
     </div>
   );
