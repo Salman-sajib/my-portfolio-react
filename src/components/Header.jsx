@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className='px-2 fixed top-2 w-full'>
       <section className='max-w-[1200px] mx-auto bg-gray-100/10 shadow-md rounded-md text-gray-50 flex items-center justify-between px-4 py-1'>
-        <span className='logo text-[1.5rem] font-bold font-dancingScript'>
+        <span className='logo text-[1.5rem] text-gray-50 font-bold font-dancingScript'>
           Salman
         </span>
         <nav>
