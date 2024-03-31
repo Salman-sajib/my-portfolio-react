@@ -24,7 +24,7 @@ const Main = () => {
         style={{
           position: 'absolute',
           inset: 0,
-          backgroundImage: `radial-gradient(circle, rgba(9,9,11,.3), rgba(9,9,11,.8))`,
+          backgroundImage: `radial-gradient(circle, rgba(9,9,11,.3), rgba(9,9,11,0.95))`,
         }}
       />
       <motion.div
