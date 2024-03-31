@@ -44,7 +44,7 @@ const DotGrid = () => {
         }),
         direction: 'alternate', // Alternate the direction of animation
       });
-    }, 2000); // Wait for 500 milliseconds before starting animation
+    }, 2500); // Wait for 500 milliseconds before starting animation
   };
 
   const dots = [];

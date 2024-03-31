@@ -30,7 +30,7 @@ const Main = () => {
       <motion.div
         initial={{ x: '-100%', y: '-600%', rotate: '40deg', opacity: 1 }} // Initial position outside the viewport with opacity 0
         animate={{ x: '0', y: 0, opacity: 1 }} // Animation to bring it inside the viewport with opacity 1
-        transition={{ duration: 1.5, delay: 0.5, ease: 'easeOut' }} // Animation duration and easing
+        transition={{ duration: 1.5, delay: 1, ease: 'easeIn' }} // Animation duration and easing
         style={{
           position: 'absolute',
           width: '800px',
