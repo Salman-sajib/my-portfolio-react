@@ -1,17 +1,21 @@
+import { motion } from 'framer-motion';
+
 import { v4 as uuidv4 } from 'uuid';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const navLinks = [
   { id: uuidv4(), name: 'Home', href: '#home' },
   { id: uuidv4(), name: 'About', href: '#about' },
   { id: uuidv4(), name: 'Skills', href: '#skills' },
   { id: uuidv4(), name: 'Projects', href: '#projects' },
+  { id: uuidv4(), name: 'Contact', href: '#contact' },
 ];
 
 const Header = () => {
   return (
-    <header className='pt-2 px-2 font-openSans'>
-      <section className='max-w-[1440px] mx-auto bg-slate-900 shadow-md rounded-full text-gray-50 flex items-center justify-between px-4 py-3 '>
-        <span className='logo text-[1.3rem] font-bold font-dancingScript'>
+    <header className='px-2 fixed top-2 w-full'>
+      <section className='max-w-[1200px] mx-auto bg-gray-100/10 shadow-md rounded-md text-gray-50 flex items-center justify-between px-4 py-1'>
+        <span className='logo text-[1.5rem] font-bold font-dancingScript'>
           Salman
         </span>
         <nav>
@@ -19,7 +23,7 @@ const Header = () => {
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a
-                  className='text-[.97rem] font-medium px-3 py-[2px] rounded-full hover:bg-gray-50 hover:text-slate-900 focus:bg-gray-50 focus:text-slate-900 transition-all'
+                  className='text-[.92rem] text-gray-300 font-inter font-regular px-3 py-[2px] rounded-full  hover:text-gray-50  focus:text-gray-50  active:text-gray-50 transition-all'
                   href={link.href}
                 >
                   {link.name}
@@ -28,14 +32,28 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <button>
-          <a
-            className=' px-6 py-2 mx-[-8px] rounded-full bg-gradient-to-tr from-[#a1c4fd] to-[#c2e9fb] text-slate-900 shadow-md'
-            href='#'
+        <div className='flex items-center gap-2'>
+          <motion.a
+            whileHover={{
+              scale: 1.11,
+            }}
+            className='text-2xl text-gray-50'
+            href='https://github.com/Salman-sajib'
+            target='_blank'
           >
-            Contact me
-          </a>
-        </button>
+            <FaGithub />
+          </motion.a>
+          <motion.a
+            whileHover={{
+              scale: 1.11,
+            }}
+            className='text-2xl text-gray-50'
+            href=''
+            target='_blank'
+          >
+            <FaLinkedin />
+          </motion.a>
+        </div>
       </section>
     </header>
   );

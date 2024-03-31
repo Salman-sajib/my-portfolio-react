@@ -10,6 +10,7 @@ export default {
         poppins: ['Poppins'],
         playfairDisplay: ['Playfair Display'],
         dancingScript: ['Dancing Script'],
+        inter: ['Inter'],
       },
     },
   },

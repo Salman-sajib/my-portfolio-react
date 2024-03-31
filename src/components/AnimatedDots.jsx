@@ -20,28 +20,31 @@ const DotGrid = () => {
   }, []);
 
   const startAnimation = () => {
-    // Start the animation
-    animationRef.current = anime({
-      targets: '.dot-point',
-      scale: [
-        { value: 1.2, easing: 'easeOutSine', duration: 400 },
-        { value: 1, easing: 'easeInOutQuad', duration: 800 },
-      ],
-      translateY: [
-        { value: -15, easing: 'easeOutSine', duration: 400 },
-        { value: 0, easing: 'easeInOutQuad', duration: 800 },
-      ],
-      opacity: [
-        { value: 1, easing: 'easeOutSine', duration: 400 },
-        { value: 0.5, easing: 'easeInOutQuad', duration: 800 },
-      ],
-      loop: true, // Loop the animation infinitely
-      delay: anime.stagger(100, {
-        grid: [GRID_WIDTH, GRID_HEIGHT],
-        from: 'center',
-      }),
-      direction: 'alternate', // Alternate the direction of animation
-    });
+    // Start the animation after a delay
+    setTimeout(() => {
+      // Start the animation
+      animationRef.current = anime({
+        targets: '.dot-point',
+        scale: [
+          { value: 1.3, easing: 'easeOutSine', duration: 400 },
+          { value: 1, easing: 'easeInOutQuad', duration: 800 },
+        ],
+        translateY: [
+          { value: -15, easing: 'easeOutSine', duration: 400 },
+          { value: 0, easing: 'easeInOutQuad', duration: 800 },
+        ],
+        opacity: [
+          { value: 1, easing: 'easeOutSine', duration: 400 },
+          { value: 0.5, easing: 'easeInOutQuad', duration: 800 },
+        ],
+        loop: true, // Loop the animation infinitely
+        delay: anime.stagger(150, {
+          grid: [GRID_WIDTH, GRID_HEIGHT],
+          from: 'center',
+        }),
+        direction: 'alternate', // Alternate the direction of animation
+      });
+    }, 2000); // Wait for 500 milliseconds before starting animation
   };
 
   const dots = [];
@@ -56,7 +59,7 @@ const DotGrid = () => {
           key={`${i}-${j}`}
         >
           <div
-            className='dot-point size-[.5rem] rounded-full bg-gradient-to-br from-[#09203f] to-[#537895] opacity-50'
+            className='dot-point size-[.5rem] rounded-full bg-gradient-to-br from-[#9ca3af] to-[#6b7280] opacity-50'
             data-index={index}
           />
         </div>
