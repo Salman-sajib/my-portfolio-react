@@ -6,7 +6,7 @@ import AnimatedDots from './AnimatedDots';
 
 const Hero = () => {
   return (
-    <div className=' px-3 md:px-5 '>
+    <div className=' px-2 md:px-5 '>
       <section className='text-gray-300 max-w-[1000px] mx-auto min-h-dvh flex flex-col md:flex-row items-center justify-center font-inter overflow-hidden pt-[1rem] md:pt-0 '>
         <div className=' z-30 flex flex-col gap-4 '>
           <motion.h2

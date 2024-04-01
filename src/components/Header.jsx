@@ -61,7 +61,7 @@ const Header = () => {
           onClick={handleOpenNav}
           className=' md:hidden cursor-pointer px-2 py-1 rounded-md hover:bg-gray-50/20 '
         >
-          <RxHamburgerMenu className=' text-xl text-gray-50  ' />
+          <RxHamburgerMenu className=' text-[1.5rem] text-gray-50  ' />
         </button>
         <div className='flex items-center gap-2'>
           <motion.a
