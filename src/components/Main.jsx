@@ -5,7 +5,7 @@ import Hero from './Hero';
 
 const Main = () => {
   return (
-    <main className='w-full min-h-dvh bg-zinc-950'>
+    <main id='home' className='w-full min-h-dvh bg-zinc-950'>
       <div
         className='grid-lines'
         style={{
@@ -31,16 +31,7 @@ const Main = () => {
         initial={{ x: '-100%', y: '-600%', rotate: '40deg', opacity: 1 }} // Initial position outside the viewport with opacity 0
         animate={{ x: '0', y: 0, opacity: 1 }} // Animation to bring it inside the viewport with opacity 1
         transition={{ duration: 1.5, delay: 1, ease: 'easeIn' }} // Animation duration and easing
-        style={{
-          position: 'absolute',
-          width: '650px',
-          height: '120px',
-          borderRadius: '1000px',
-          background: 'rgba(255, 255, 255, .05)',
-          filter: 'blur(40px)',
-          top: '220px',
-          left: '-100px',
-        }}
+        className=' absolute top-[220px] -left-[100px] w-[400px] md:w-[600px] xl:w-[1000px] h-[120px] rounded-full bg-white/5 blur-2xl '
       />
       <Header />
       <div>

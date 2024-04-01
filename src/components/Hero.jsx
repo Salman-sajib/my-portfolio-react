@@ -7,13 +7,13 @@ import AnimatedDots from './AnimatedDots';
 const Hero = () => {
   return (
     <div className=' px-4 pt-5'>
-      <section className='text-gray-300 max-w-[1000px] mx-auto min-h-dvh flex items-center justify-center font-inter '>
+      <section className='text-gray-300 max-w-[1000px] mx-auto min-h-dvh flex flex-col md:flex-row items-center justify-center font-inter mt-[-4rem] '>
         <div className=' z-30 flex flex-col gap-4 '>
           <motion.h2
             initial={{ y: '40px', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className='text-2xl font-regular'
+            className='text-xl md:text-2xl font-regular'
           >
             Hi👋, I Am Salman Farshi
           </motion.h2>
@@ -26,7 +26,7 @@ const Hero = () => {
               backgroundClip: 'text',
               color: 'transparent',
             }}
-            className='text-7xl font-bold'
+            className='text-5xl md:text-7xl font-bold'
           >
             Front-end Web Developer
           </motion.h1>
@@ -34,7 +34,7 @@ const Hero = () => {
             initial={{ y: '40px', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className='text-base max-w-[35rem]'
+            className='text-base max-w-[28rem] md:max-w-[35rem]'
           >
             I am passionate about crafting intuitive user interfaces. With
             expertise in HTML, CSS, and JavaScript, I transform concepts into
@@ -54,7 +54,7 @@ const Hero = () => {
             <FaArrowRight className='text-zinc-950 group-hover:-rotate-45 transition-all' />
           </motion.a>
         </div>
-        <div className='z-20 ml-[-20rem]'>
+        <div className='z-20 hidden md:block ml-[-20rem]'>
           <AnimatedDots />
         </div>
       </section>
