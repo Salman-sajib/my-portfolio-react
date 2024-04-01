@@ -5,7 +5,7 @@ import Hero from './Hero';
 
 const Main = () => {
   return (
-    <main id='home' className='w-full min-h-dvh bg-zinc-950'>
+    <main id='home' className='w-full min-h-dvh bg-zinc-950 '>
       <div
         className='grid-lines'
         style={{

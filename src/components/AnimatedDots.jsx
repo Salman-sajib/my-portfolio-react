@@ -1,10 +1,7 @@
 import { useEffect, useRef } from 'react';
 import anime from 'animejs';
 
-const GRID_WIDTH = 30;
-const GRID_HEIGHT = 25;
-
-const DotGrid = () => {
+const DotGrid = ({ width = 30, height = 25 }) => {
   const animationRef = useRef(null);
 
   useEffect(() => {
@@ -39,19 +36,19 @@ const DotGrid = () => {
         ],
         loop: true, // Loop the animation infinitely
         delay: anime.stagger(150, {
-          grid: [GRID_WIDTH, GRID_HEIGHT],
+          grid: [width, height],
           from: 'center',
         }),
         direction: 'alternate', // Alternate the direction of animation
       });
-    }, 2500); // Wait for 500 milliseconds before starting animation
+    }, 2500); // Wait for 2500 milliseconds before starting animation
   };
 
   const dots = [];
   let index = 0;
 
-  for (let i = 0; i < GRID_WIDTH; i++) {
-    for (let j = 0; j < GRID_HEIGHT; j++) {
+  for (let i = 0; i < width; i++) {
+    for (let j = 0; j < height; j++) {
       dots.push(
         <div
           className='rounded-full transition-colors hover:bg-slate-600'
@@ -70,7 +67,7 @@ const DotGrid = () => {
 
   return (
     <div
-      style={{ gridTemplateColumns: `repeat(${GRID_WIDTH}, 1fr)` }}
+      style={{ gridTemplateColumns: `repeat(${width}, 1fr)` }}
       className='grid gap-3 w-fit'
     >
       {dots}
@@ -78,10 +75,10 @@ const DotGrid = () => {
   );
 };
 
-const WaterDropGrid = () => {
+const WaterDropGrid = ({ width = 30, height = 25 }) => {
   return (
     <div>
-      <DotGrid />
+      <DotGrid width={width} height={height} />
     </div>
   );
 };

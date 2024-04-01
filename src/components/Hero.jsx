@@ -6,8 +6,8 @@ import AnimatedDots from './AnimatedDots';
 
 const Hero = () => {
   return (
-    <div className=' px-4 pt-5'>
-      <section className='text-gray-300 max-w-[1000px] mx-auto min-h-dvh flex flex-col md:flex-row items-center justify-center font-inter mt-[-4rem] '>
+    <div className=' px-3 md:px-5 '>
+      <section className='text-gray-300 max-w-[1000px] mx-auto min-h-dvh flex flex-col md:flex-row items-center justify-center font-inter overflow-hidden'>
         <div className=' z-30 flex flex-col gap-4 '>
           <motion.h2
             initial={{ y: '40px', opacity: 0 }}
@@ -54,7 +54,8 @@ const Hero = () => {
             <FaArrowRight className='text-zinc-950 group-hover:-rotate-45 transition-all' />
           </motion.a>
         </div>
-        <div className='z-20 hidden md:block ml-[-20rem]'>
+
+        <div className='z-20 mt-[-3rem] md:block md:ml-[-20rem]'>
           <AnimatedDots />
         </div>
       </section>

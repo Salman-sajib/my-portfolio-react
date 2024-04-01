@@ -1,10 +1,10 @@
 import './App.css';
-import Main from './components/Main';
+import MainSection from './components/MainSection';
 
 function App() {
   return (
     <div className='app min-h-dvh bg-slate-950 font-openSans'>
-      <Main />
+      <MainSection />
     </div>
   );
 }

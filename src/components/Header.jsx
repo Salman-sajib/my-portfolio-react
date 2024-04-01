@@ -110,18 +110,17 @@ const Header = () => {
             style={{
               backdropFilter: 'blur(20px)',
             }}
-            className=' min-h-dvh absolute top-0 left-0 w-full bg-zinc-950/10 z-40 '
+            className=' min-h-dvh absolute top-0 left-0 w-full bg-zinc-950/10 z-40 p-3 flex flex-col items-center '
           >
-            <button
-              onClick={handleCloseNav}
-              style={{
-                width: 'max-content',
-              }}
-              className=' h-[5vh] flex items-center justify-center text-2xl text-gray-300 hover:text-gray-50 cursor-pointer float-right '
-            >
-              <CgClose />
-            </button>
-            <ul className=' h-[95vh] flex flex-col items-center justify-center gap-10 '>
+            <div className='w-full flex justify-end'>
+              <button
+                onClick={handleCloseNav}
+                className=' text-2xl text-gray-300 hover:text-gray-50 cursor-pointer border border-gray-50 px-2 py-1 rounded-md'
+              >
+                <CgClose />
+              </button>
+            </div>
+            <ul className=' min-h-dvh flex flex-col items-center justify-center gap-10 '>
               {navLinks.map((link, index) => (
                 <motion.li
                   key={link.id}
